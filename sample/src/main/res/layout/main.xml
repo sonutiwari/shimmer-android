@@ -23,6 +23,7 @@
             <ImageView
                 android:layout_width="64dp"
                 android:layout_height="64dp"
+                android:contentDescription="@string/facebook_logo"
                 android:src="@drawable/fb_logo" />
 
             <TextView
@@ -50,37 +51,38 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
             android:text="@string/presets"
+            android:layout_marginEnd="10dp"
             android:textAllCaps="true" />
 
         <Button
             android:id="@+id/preset_button0"
             style="@style/thin.white.small.button"
             android:gravity="center"
-            android:text="1" />
+            android:text="@string/_1" />
 
         <Button
             android:id="@+id/preset_button1"
             style="@style/thin.white.small.button"
             android:gravity="center"
-            android:text="2" />
+            android:text="@string/_2" />
 
         <Button
             android:id="@+id/preset_button2"
             style="@style/thin.white.small.button"
             android:gravity="center"
-            android:text="3" />
+            android:text="@string/_3" />
 
         <Button
             android:id="@+id/preset_button3"
             style="@style/thin.white.small.button"
             android:gravity="center"
-            android:text="4" />
+            android:text="@string/_4" />
 
         <Button
             android:id="@+id/preset_button4"
             style="@style/thin.white.small.button"
             android:gravity="center"
-            android:text="5" />
+            android:text="@string/_5" />
     </LinearLayout>
 
     <LinearLayout
