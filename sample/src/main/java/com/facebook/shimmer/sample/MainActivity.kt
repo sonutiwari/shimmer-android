@@ -14,6 +14,7 @@ package com.facebook.shimmer.sample
 
 import android.animation.ValueAnimator
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -25,6 +26,7 @@ import kotlinx.android.synthetic.main.main.*
 class MainActivity : Activity(), View.OnClickListener {
   private lateinit var shimmerViewContainer: ShimmerFrameLayout
   private lateinit var presetButtons: Array<Button>
+    private lateinit var customOptionButton: Button
   private var currentPreset = -1
   private var toast: Toast? = null
 
@@ -39,6 +41,10 @@ class MainActivity : Activity(), View.OnClickListener {
         preset_button3,
         preset_button4
     )
+      customOptionButton = preset_custom_button
+      customOptionButton.setOnClickListener(View.OnClickListener {
+          startActivity(Intent(this@MainActivity, CustomOptionsActivity::class.java))
+      })
     presetButtons.forEach { it.setOnClickListener(this@MainActivity) }
     selectPreset(0, false)
   }
